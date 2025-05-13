@@ -1,0 +1,14 @@
+.characterBox {
+  width: 300px;
+  padding: 16px;
+  border: 1px solid #9e9e9e;
+  background-color: #363636;
+  text-align: center;
+}
+
+.charImageContainer {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}

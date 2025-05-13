@@ -1,0 +1,32 @@
+.characterBox {
+    background-color: #303030;
+    border: solid 1px #555555;
+    height: 210px;
+    width: 150px;
+    margin-top: 20px;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+}
+.characterBox:hover {
+    background-color: #6161b8;
+}
+
+.characterBox:hover img {
+    transform: scale(1.1, 1.1);
+}
+
+.charImageContainer {
+    border-bottom: solid 1px #555555;
+    margin: auto;
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+}
+
+.characterName {
+    font-family: monospace;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+}

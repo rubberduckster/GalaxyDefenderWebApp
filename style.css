@@ -1,0 +1,161 @@
+body {
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+.topNavBar {
+    background-color: #303030;
+    border-bottom: solid 2px #7a7a7a;
+    height: 80px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.login {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    float: right;
+    position: relative;
+    top: 15%;
+    right: 10px;
+}
+
+.sideNavBar {
+    background-color: #303030;
+    border-right: solid 2px #7a7a7a;
+    color: white;
+    height: 990px;
+    width: 200px;
+    overflow: hidden;
+}
+
+.sideIcons {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.sideDivider {
+    width: 90%;
+    border: 1px solid #424242;
+    margin-right: 50px;
+}
+
+.introTitle {
+    font-family: monospace;
+    font-size: 30px;
+    color: white;
+    width: 100vw - 370px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.introduction {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    width: 100vw - 370px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.navText {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    position: relative;
+    left: 20px;
+    top: -8px;
+}
+
+/* Wiki Section */
+.wikiSection {
+    margin-left: 90px;
+    padding-top: 50px;
+}
+
+.wikiNavs {
+    display: flex;
+}
+
+/* Wiki Title */
+.wikiTitle {
+    font-family: monospace;
+    font-size: 20px;
+    color: white;
+    margin-bottom: 8px;
+}
+
+/* Wiki Divider */
+.wikiDivider {
+    width: calc(100vw - 370px);
+    margin-left: 0;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border: 1px solid #7a7a7a;
+}
+
+/* Wiki Nav */
+.wikiNav {
+    background-color: #303030;
+    border: solid 1px #555555;
+    height: 110px;
+    width: 365px;
+    margin-top: 20px;
+    align-items: center;
+    position: relative;
+    margin-right: 20px;
+    padding-right: 20px;
+}
+
+.imageContainer {
+    border-right: solid 1px #555555;
+
+    width: 30%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Wiki Image */
+#characters {
+    width: 100%;
+    transition: left 0.3s ease;
+}
+
+/* Wiki Text */
+.wikiText {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    transition: left 0.3s ease;
+}
+
+/* Hover effect */
+.wikiNav:hover {
+    background-color: #6161b8;
+}
+
+.wikiNav:hover .wikiText {
+    left: 68%;
+}
+
+.wikiNav:hover #characters {
+    transform: scale(1.1, 1.1);
+}
+
+.sideWiki {
+    display: flex;
+}
+
+.title {
+    font-family: monospace;
+    font-size: 20px;
+    color: #e9e2dd;
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
