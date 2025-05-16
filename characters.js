@@ -7,7 +7,7 @@ async function loadCharacters() {
 
         characters.forEach(character => {
             const box = document.createElement('a');
-            box.href = box.href = `character.html?id=${character.id}`;
+            box.href = `character.html?id=${character.id}`;
 
             box.innerHTML = `
                 <div class="characterBox">

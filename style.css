@@ -4,6 +4,37 @@ body {
     overflow-x: hidden;
 }
 
+/* Removes default cursor*/
+* {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+}
+
+.custom-cursor img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.custom-cursor.active {
+    width: 47px;
+    height: 47px;
+}
+
+body:has(a:hover) #cursor {
+    filter: drop-shadow(2px 0 0 #9494fa) 
+        drop-shadow(0 2px 0 #9494fa)
+        drop-shadow(-2px 0 0 #9494fa) 
+        drop-shadow(0 -2px 0 #9494fa);
+  }
+
 .topNavBar {
     background-color: #303030;
     border-bottom: solid 2px #7a7a7a;
@@ -26,7 +57,7 @@ body {
     background-color: #303030;
     border-right: solid 2px #7a7a7a;
     color: white;
-    height: 990px;
+    height: 100vh;
     width: 200px;
     overflow: hidden;
 }
@@ -101,7 +132,7 @@ body {
     background-color: #303030;
     border: solid 1px #555555;
     height: 110px;
-    width: 365px;
+    width: 482px;
     margin-top: 20px;
     align-items: center;
     position: relative;
@@ -112,7 +143,7 @@ body {
 .imageContainer {
     border-right: solid 1px #555555;
 
-    width: 30%;
+    width: 23%;
     height: 100%;
     overflow: hidden;
 }
@@ -121,6 +152,20 @@ body {
 #characters {
     width: 100%;
     transition: left 0.3s ease;
+}
+
+#galaxies {
+    width: 150%;
+    height: 100%;
+    transition: left 0.3s ease;
+}
+
+#equipment {
+    width: 100%;
+}
+
+#level {
+    width: 100%;
 }
 
 /* Wiki Text */
@@ -146,6 +191,19 @@ body {
 .wikiNav:hover #characters {
     transform: scale(1.1, 1.1);
 }
+
+.wikiNav:hover #galaxies {
+    transform: scale(1.1, 1.1);
+}
+
+.wikiNav:hover #equipment {
+    transform: scale(1.1, 1.1);
+}
+
+.wikiNav:hover #level {
+    transform: scale(1.1, 1.1);
+}
+
 
 .sideWiki {
     display: flex;
