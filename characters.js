@@ -12,7 +12,7 @@ async function loadCharacters() {
             box.innerHTML = `
                 <div class="characterBox">
                     <div class="charImageContainer">
-                        <img src="${character.characterIMG}" alt="${character.name}" style="width: 100%; height: 100%; object-fit: cover;">
+                        <img src="${character.femIMG}" alt="${character.name}" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <p class="characterName">${character.name}</p>
                 </div>
