@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="login.css">
     <title>Document</title>
 </head>
 <body style="background-color: #404040;">
@@ -11,8 +12,10 @@
     <!-- Top Nav -->
     <div class="topNavBar">
         <img src="/resources/banner.jpg" style="width: 200px; border-right: solid 2px #7a7a7a; filter: opacity(60%);">
-        <a href="login.html"><img src="/resources/LoginIcon.png" style="width: 36px; top: 19px; right: 8px; position: relative; float: right;">
-        <p class="login">Login</p></a>
+        <a href="login.html" id="loginLink">
+            <img src="/resources/LoginIcon.png" class="loginImg" style="width: 36px; top: 19px; right: 8px; position: relative; float: right;">
+        <p class="login">Login</p>
+    </a>
     </div>
     <p class="title">Galaxy Defender</p>
 
@@ -22,7 +25,7 @@
     <!-- Side Nav -->
     <div class="sideNavBar">
         <div class="sideIcons">
-        <a href=""><div><img src="/resources/HomeIcon.png" style="width: 35px;"><span class="navText">Home</span></div></a>
+        <a href="index.html"><div><img src="/resources/HomeIcon.png" style="width: 35px;"><span class="navText">Home</span></div></a>
         <hr class="sideDivider">
         <a href="characters.html"><div><img src="/resources/CharacterIcon.png" style="width: 35px;"><span class="navText">Characters</span></div></a>
         <hr class="sideDivider">
@@ -46,7 +49,13 @@
         
         <!-- Wiki Nav -->
         <div class="loginBox">
-
+            <p>Username: </p>
+            <input type="text" id="username" class="loginInput">
+            <p>Password: </p>
+            <input type="password" id="password" class="loginInput">
+            <p></p>
+            <button onclick="login()" class="loginButton">Login</button>
+            <p id="loginError" style="display: none;">Login failed. Please try again.</p>
         </div>
     </div>
 </div>
@@ -55,5 +64,6 @@
     <img src="/resources/cursor.png" id="cursor">
 </div>
 <script src="cursor.js"></script>
+<script src="login.js"></script>
 </body>
 </html>

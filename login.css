@@ -1,0 +1,41 @@
+.loginBox {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+
+    width: 20%;
+
+    margin-left: 8px;
+    margin-top: 40px;
+}
+
+.loginInput {
+    width: 200px;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+.loginButton {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+
+    padding: 5px 16px;
+    background-color: #6161b8;
+    border: none;
+    border-radius: 4px;
+
+    margin-left: 45%;
+    margin-top: 5px;
+}
+
+#userNameDisplay {
+    font-family: monospace;
+    font-size: 16px;
+    color: white;
+    float: right;
+    position: relative;
+    top: 15%;
+    right: 10px;
+}
