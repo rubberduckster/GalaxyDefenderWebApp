@@ -1,6 +1,9 @@
 const urlParams = new URLSearchParams(window.location.search);
 const characterId = urlParams.get('id');
 
+const characterUrl = '`https://localhost:7093/api/characters/${characterId}`';
+const pathUrl = `https://localhost:7093/api/characters/${characterId}/path`;
+
 fetch(`https://localhost:7093/api/characters/${characterId}`)
     .then(response => response.json())
     .then(character => {
@@ -13,7 +16,7 @@ fetch(`https://localhost:7093/api/characters/${characterId}`)
                 <div class="characterBox">
                 <div class="flexMenu">
                     <div class="pathSelector">
-                    gay
+                    <p class="characterName">${character.name}</p>
                     </div>
                 <div class="toggleBox">
                     <label class="switch">
@@ -25,7 +28,16 @@ fetch(`https://localhost:7093/api/characters/${characterId}`)
                     <div class="charImageContainer">
                         <img id="characterImage" src="${character.femIMG}" alt="${character.name}" style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
-                    <p class="characterName">${character.name}</p>
+                    <div class="characterStats">
+                    <p class="line1" style="margin-top: 0px">Type: ${character.unitType}</p>
+                    <p class="line2">HP: ${character.hp}</p>
+                    <p class="line1">DEF: ${character.def}</p>
+                    <p class="line2">DMG: ${character.dmg}</p>
+                    <p class="line1">Range: ${character.range}</p>
+                    <p class="line2">Talent: ${character.talentName}</p>
+                    <p class="line1">${character.talentDescription}</p>
+                    <p class="line2">Galaxy: </p>
+                    </div>
                 </div>
             `;
 

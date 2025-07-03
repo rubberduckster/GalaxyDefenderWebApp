@@ -16,16 +16,27 @@ function parseJwt(token) {
     }
 }
 
+window.userInfo = null; // Default state
+
 window.addEventListener('DOMContentLoaded', () => {
     const token = localStorage.getItem('token');
 
     const loginLink = document.getElementById('loginLink');
     const loginIcon = document.querySelector('.loginImg');
     const loginText = document.querySelector('.login');
+    const userIcon = document.querySelector('.userImg')
 
     if (token) {
         const payload = parseJwt(token);
-        const userName = payload?.unique_name || "User";
+    
+        // Set global userInfo for use across all pages
+        window.userInfo = {
+            name: payload.unique_name || "User",
+            isAdmin: payload.isAdmin === "1"
+        };
+    
+        const userName = window.userInfo.name;
+    
 
         if (loginText) {
             loginText.textContent = userName;
@@ -48,6 +59,14 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-
-
-
+function requireAdmin() {
+    const check = setInterval(() => {
+        if (!window.userInfo) {
+            alert("You must be logged in to view this page.")
+            window.location.href = 'login.html';
+        } else if (!window.userInfo.isAdmin) {
+            alert("Access denied: Admins only.")
+            window.location.href = 'index.html'
+        }
+    }, 10)
+}
